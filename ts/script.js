@@ -1,16 +1,16 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Data nilai
     var dataNilai = [
-        { subject: 'Algoritma Pemrograman', nilai: 76.82, sks: 4 },
-        { subject: 'Matematika Diskrit', nilai: 82.4, sks: 3 },
-        { subject: 'Pemodelan Basis Data', nilai: 78.56, sks: 3 },
-        { subject: 'Bahasa Indonesia', nilai: 92.03, sks: 2 },
-        { subject: 'Sistem Digital', nilai: 68.45, sks: 3 }
+        { matkul: 'Algoritma Pemrograman', nilai: 76.82, sks: 4 },
+        { matkul: 'Matematika Diskrit', nilai: 82.4, sks: 3 },
+        { matkul: 'Pemodelan Basis Data', nilai: 78.56, sks: 3 },
+        { matkul: 'Bahasa Indonesia', nilai: 92.03, sks: 2 },
+        { matkul: 'Sistem Digital', nilai: 68.45, sks: 3 }
     ];
     var tableBody = document.getElementById('data-nilai');
     dataNilai.forEach(function (item) {
         var row = document.createElement('tr');
-        row.innerHTML = "\n            <td>".concat(item.subject, "</td>\n            <td>").concat(item.nilai, "</td>\n            <td>").concat(item.sks, "</td>\n        ");
+        row.innerHTML = "\n            <td>".concat(item.matkul, "</td>\n            <td>").concat(item.nilai, "</td>\n            <td>").concat(item.sks, "</td>\n        ");
         tableBody.appendChild(row);
     });
     // Fungsi untuk menghitung poin berdasarkan nilai

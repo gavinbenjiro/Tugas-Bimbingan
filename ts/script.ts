@@ -1,24 +1,24 @@
-interface Subject {
-    subject: string;
+interface Matkul {
+    matkul: string;
     nilai: number;
     sks: number;
 }
 
 document.addEventListener('DOMContentLoaded', function() {
     // Data nilai
-    const dataNilai: Subject[] = [
-        { subject: 'Algoritma Pemrograman', nilai: 76.82, sks: 4 },
-        { subject: 'Matematika Diskrit', nilai: 82.4, sks: 3 },
-        { subject: 'Pemodelan Basis Data', nilai: 78.56, sks: 3 },
-        { subject: 'Bahasa Indonesia', nilai: 92.03, sks: 2 },
-        { subject: 'Sistem Digital', nilai: 68.45, sks: 3 }
+    const dataNilai: Matkul[] = [
+        { matkul: 'Algoritma Pemrograman', nilai: 76.82, sks: 4 },
+        { matkul: 'Matematika Diskrit', nilai: 82.4, sks: 3 },
+        { matkul: 'Pemodelan Basis Data', nilai: 78.56, sks: 3 },
+        { matkul: 'Bahasa Indonesia', nilai: 92.03, sks: 2 },
+        { matkul: 'Sistem Digital', nilai: 68.45, sks: 3 }
     ];
 
     const tableBody = document.getElementById('data-nilai') as HTMLTableSectionElement;
     dataNilai.forEach(item => {
         const row = document.createElement('tr');
         row.innerHTML = `
-            <td>${item.subject}</td>
+            <td>${item.matkul}</td>
             <td>${item.nilai}</td>
             <td>${item.sks}</td>
         `;
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Fungsi untuk menghitung IPK
-    function hitungIPK(dataNilai: Subject[]): number {
+    function hitungIPK(dataNilai: Matkul[]): number {
         let jumlahPoin = 0;
         let jumlahSks = 0;
 
