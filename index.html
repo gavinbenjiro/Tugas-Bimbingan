@@ -24,39 +24,23 @@
                     <th>Sks</th>
                 </tr>
             </thead>
-            <tbody>
-                <tr>
-                    <td>Algoritma Pemrograman</td>
-                    <td>76.82</td>
-                    <td>4</td>
-                </tr>
-                <tr>
-                    <td>Matematika Diskrit</td>
-                    <td>82.4</td>
-                    <td>3</td>
-                </tr>
-                <tr>
-                    <td>Pemodelan Basis Data</td>
-                    <td>78.56</td>
-                    <td>3</td>
-                </tr>
-                <tr>
-                    <td>Bahasa Indonesia</td>
-                    <td>92.03</td>
-                    <td>2</td>
-                </tr>
-                <tr>
-                    <td>Sistem Digital</td>
-                    <td>68.45</td>
-                    <td>3</td>
-                </tr>
+            <tbody id="data-nilai">
+                <!-- Data nilai di dalam Javascript -->
             </tbody>
+            <tfoot>
+                <tr>
+                    <th>IPK</th>
+                    <th id="data-ipk">
+                        <!-- Data ipk di dalam Javascript -->
+                    </th>
+                </tr>
+            </tfoot>
         </table>
     </section>
 
     <section class="formulir">
         <h2>Formulir Keluhan Nilai</h2>
-        <form>
+        <form id="form-keluhan">
             <label for="nama">Nama:</label>
             <input type="text" name="nama" id="nama">
 
@@ -85,5 +69,7 @@
             </ul>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
