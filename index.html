@@ -30,7 +30,7 @@
             <tfoot>
                 <tr>
                     <th>IPK</th>
-                    <th id="data-ipk">
+                    <th id="data-ipk" colspan="2">
                         <!-- Data ipk di dalam Javascript -->
                     </th>
                 </tr>
@@ -42,19 +42,19 @@
         <h2>Formulir Keluhan Nilai</h2>
         <form id="form-keluhan">
             <label for="nama">Nama:</label>
-            <input type="text" name="nama" id="nama">
+            <input type="text" name="nama" id="nama" required>
 
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
+            <input type="email" id="email" name="email" required>
 
             <label for="nim">NIM:</label>
-            <input type="text" id="nim" name="nim">
+            <input type="text" id="nim" name="nim" required>
 
             <label for="matkul">Mata Kuliah:</label>
-            <input type="text" id="matkul" name="matkul">
+            <input type="text" id="matkul" name="matkul" required>
 
             <label for="keluhan">Keluhan:</label>
-            <textarea name="keluhan" id="keluhan" rows="10" cols="30" placeholder="isi keluhanmu disini"></textarea>
+            <textarea name="keluhan" id="keluhan" rows="10" cols="30" placeholder="isi keluhanmu disini" required></textarea>
 
             <input type="submit" value="Send">
         </form>
@@ -70,6 +70,6 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="ts/script.js"></script>
 </body>
 </html>
