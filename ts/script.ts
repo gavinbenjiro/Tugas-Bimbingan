@@ -5,7 +5,7 @@ interface Matkul {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Data nilai
+    // data nilai
     const dataNilai: Matkul[] = [
         { matkul: 'Algoritma Pemrograman', nilai: 76.82, sks: 4 },
         { matkul: 'Matematika Diskrit', nilai: 82.4, sks: 3 },
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
         tableBody.appendChild(row);
     });
 
-    // Fungsi untuk menghitung poin berdasarkan nilai
+    // ipk
     function hitungIndex(nilai: number): number {
         if (nilai > 80) {
             return 4;
@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Fungsi untuk menghitung IPK
     function hitungIPK(dataNilai: Matkul[]): number {
         let jumlahPoin = 0;
         let jumlahSks = 0;
@@ -58,12 +57,11 @@ document.addEventListener('DOMContentLoaded', function() {
         return jumlahPoin / jumlahSks;
     }
 
-    // Menghitung dan menampilkan IPK
     const ipk = hitungIPK(dataNilai);
     const ipkTertampil = document.getElementById('data-ipk') as HTMLTableCellElement;
     ipkTertampil.textContent = ipk.toFixed(2);
 
-    // Formulir keluhan
+    // formulir keluhan
     const formKeluhan = document.getElementById('form-keluhan') as HTMLFormElement;
     formKeluhan.addEventListener('submit', function(event: Event) {
         event.preventDefault();

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Data nilai
+    // data nilai
     var dataNilai = [
         { matkul: 'Algoritma Pemrograman', nilai: 76.82, sks: 4 },
         { matkul: 'Matematika Diskrit', nilai: 82.4, sks: 3 },
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
         row.innerHTML = "\n            <td>".concat(item.matkul, "</td>\n            <td>").concat(item.nilai, "</td>\n            <td>").concat(item.sks, "</td>\n        ");
         tableBody.appendChild(row);
     });
-    // Fungsi untuk menghitung poin berdasarkan nilai
+    // ipk
     function hitungIndex(nilai) {
         if (nilai > 80) {
             return 4;
@@ -37,7 +37,6 @@ document.addEventListener('DOMContentLoaded', function () {
             return 0;
         }
     }
-    // Fungsi untuk menghitung IPK
     function hitungIPK(dataNilai) {
         var jumlahPoin = 0;
         var jumlahSks = 0;
@@ -48,11 +47,10 @@ document.addEventListener('DOMContentLoaded', function () {
         });
         return jumlahPoin / jumlahSks;
     }
-    // Menghitung dan menampilkan IPK
     var ipk = hitungIPK(dataNilai);
     var ipkTertampil = document.getElementById('data-ipk');
     ipkTertampil.textContent = ipk.toFixed(2);
-    // Formulir keluhan
+    // formulir keluhan
     var formKeluhan = document.getElementById('form-keluhan');
     formKeluhan.addEventListener('submit', function (event) {
         event.preventDefault();
